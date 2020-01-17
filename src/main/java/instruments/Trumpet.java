@@ -1,6 +1,9 @@
 package instruments;
 
-public class Trumpet extends Instrument {
+import behaviour.IPlay;
+import behaviour.ISell;
+
+public class Trumpet extends Instrument implements IPlay, ISell {
 
     int valveNum;
 
@@ -15,5 +18,9 @@ public class Trumpet extends Instrument {
 
     public String play(){
         return "toot toot";
+    }
+
+    public double markUp(){
+        return sellingPrice -= buyingPrice;
     }
 }

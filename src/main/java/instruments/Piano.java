@@ -1,6 +1,9 @@
 package instruments;
 
-public class Piano extends Instrument {
+import behaviour.IPlay;
+import behaviour.ISell;
+
+public class Piano extends Instrument implements IPlay, ISell {
 
     String brand;
 
@@ -15,5 +18,9 @@ public class Piano extends Instrument {
 
     public String play(){
         return "the sound of the Black Parade...";
+    }
+
+    public double markUp(){
+        return sellingPrice -= buyingPrice;
     }
 }

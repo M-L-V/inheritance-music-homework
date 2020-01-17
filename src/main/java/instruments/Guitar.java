@@ -1,6 +1,9 @@
 package instruments;
 
-public class Guitar extends Instrument {
+import behaviour.IPlay;
+import behaviour.ISell;
+
+public class Guitar extends Instrument implements IPlay, ISell {
 
     Boolean electric;
 
@@ -15,5 +18,9 @@ public class Guitar extends Instrument {
 
     public String play(){
         return "Smoke on the water...";
+    }
+
+    public double markUp(){
+        return sellingPrice -= buyingPrice;
     }
 }

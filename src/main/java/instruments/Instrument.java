@@ -1,14 +1,15 @@
 package instruments;
 
 import behaviour.IPlay;
+import behaviour.ISell;
 
-public abstract class Instrument implements IPlay {
+public abstract class Instrument {
 
     private String material;
     private String colour;
     private String type;
-    private double buyingPrice;
-    private double sellingPrice;
+    protected double buyingPrice;
+    protected double sellingPrice;
 
     public Instrument(String material, String colour, String type, double buyingPrice, double sellingPrice) {
         this.material = material;
@@ -37,6 +38,7 @@ public abstract class Instrument implements IPlay {
     public double getSellingPrice() {
         return sellingPrice;
     }
+
 
 
 }
