@@ -1,7 +1,5 @@
 package instruments;
 
-import behaviour.IPlay;
-import behaviour.ISell;
 
 public abstract class Instrument {
 
